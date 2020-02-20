@@ -2,7 +2,6 @@ ZCBlockProt
 =========
 Based on ArchBlock
 
-Builds are available! You can get them at [the Bamboo server](http://bamboo.gserv.me/browse/PLUG-BLOCK/latest).
 
 ---
 
