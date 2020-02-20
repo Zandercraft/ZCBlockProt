@@ -1,13 +1,6 @@
-This project has been abandoned
-===============================
+ZCBlockProt
 
-This is because I am no longer involved with Minecraft and my community has been shut down.
-
-Feel free to fork and update the project for your own purposes, but I will no longer be maintaining it.
-
----
-
-ArchBlock
+Based on ArchBlock
 =========
 
 Builds are available! You can get them at [the Bamboo server](http://bamboo.gserv.me/browse/PLUG-BLOCK/latest).
