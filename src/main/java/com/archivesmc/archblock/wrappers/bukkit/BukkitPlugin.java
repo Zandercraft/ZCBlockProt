@@ -4,7 +4,6 @@ import com.archivesmc.archblock.api.ArchBlock;
 import com.archivesmc.archblock.bukkit.commands.*;
 import com.archivesmc.archblock.bukkit.events.PlayerConnectEvent;
 import com.archivesmc.archblock.bukkit.events.protection.*;
-import com.archivesmc.archblock.bukkit.importers.WatchBlockImporter;
 import com.archivesmc.archblock.integrations.WorldGuard;
 import com.archivesmc.archblock.wrappers.Config;
 import com.archivesmc.archblock.wrappers.Logger;
@@ -104,17 +103,6 @@ public class BukkitPlugin extends JavaPlugin implements Plugin {
 
         this.sessionFactory = hibernateConfiguration.buildSessionFactory();
 
-        if (this.mainConfig.getMigrate()) {
-            if (!this.hasWatchBlockPlugin()) {
-                this.getLogger().warning(this.getLocalisedString("plugin_migration_no_watchblock"));
-            } else {
-                boolean result = new WatchBlockImporter(this).doImport();
-
-                if (!result) {
-                    this.getLogger().warning(this.getLocalisedString("plugin_migration_failed"));
-                }
-            }
-        }
 
         Session session = this.getSession();
 
