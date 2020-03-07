@@ -1,4 +1,4 @@
-package com.archivesmc.archblock.storage.entities;
+package cf.zandercraft.zcblockprot.storage.entities;
 
 /**
  * Entity class that represents a friendship in the database.

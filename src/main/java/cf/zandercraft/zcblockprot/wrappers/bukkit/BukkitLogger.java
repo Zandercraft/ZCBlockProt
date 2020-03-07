@@ -1,6 +1,6 @@
-package com.archivesmc.archblock.wrappers.bukkit;
+package cf.zandercraft.zcblockprot.wrappers.bukkit;
 
-import com.archivesmc.archblock.wrappers.Logger;
+import cf.zandercraft.zcblockprot.wrappers.Logger;
 
 public class BukkitLogger implements Logger {
     java.util.logging.Logger wrappedLogger;

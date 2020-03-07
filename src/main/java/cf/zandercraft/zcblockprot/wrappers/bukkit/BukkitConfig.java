@@ -1,6 +1,6 @@
-package com.archivesmc.archblock.wrappers.bukkit;
+package cf.zandercraft.zcblockprot.wrappers.bukkit;
 
-import com.archivesmc.archblock.wrappers.Config;
+import cf.zandercraft.zcblockprot.wrappers.Config;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.List;

@@ -1,8 +1,8 @@
-package com.archivesmc.archblock.bukkit.events.protection;
+package cf.zandercraft.zcblockprot.bukkit.events.protection;
 
-import com.archivesmc.archblock.wrappers.bukkit.BukkitBlock;
-import com.archivesmc.archblock.wrappers.bukkit.BukkitPlayer;
-import com.archivesmc.archblock.wrappers.bukkit.BukkitPlugin;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitBlock;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlayer;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;

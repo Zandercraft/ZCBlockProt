@@ -3,4 +3,4 @@
  * inserting migrated data into the database.
  */
 
-package com.archivesmc.archblock.runnables.migration;
+package cf.zandercraft.zcblockprot.runnables.migration;

@@ -1,8 +1,8 @@
-package com.archivesmc.archblock.integrations;
+package cf.zandercraft.zcblockprot.integrations;
 
-import com.archivesmc.archblock.wrappers.Plugin;
-import com.archivesmc.archblock.wrappers.Block;
-import com.archivesmc.archblock.wrappers.bukkit.BukkitPlugin;
+import cf.zandercraft.zcblockprot.wrappers.Plugin;
+import cf.zandercraft.zcblockprot.wrappers.Block;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin;
 import com.sk89q.worldedit.Vector;
 import com.sk89q.worldguard.protection.ApplicableRegionSet;
 import com.sk89q.worldguard.protection.managers.RegionManager;

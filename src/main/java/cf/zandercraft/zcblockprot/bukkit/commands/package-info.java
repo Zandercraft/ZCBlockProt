@@ -3,4 +3,4 @@
  * a separate class for each command here.
  */
 
-package com.archivesmc.archblock.bukkit.commands;
+package cf.zandercraft.zcblockprot.bukkit.commands;

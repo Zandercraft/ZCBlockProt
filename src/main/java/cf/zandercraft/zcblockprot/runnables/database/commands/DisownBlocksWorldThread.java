@@ -1,7 +1,7 @@
-package com.archivesmc.archblock.runnables.database.commands;
+package cf.zandercraft.zcblockprot.runnables.database.commands;
 
-import com.archivesmc.archblock.wrappers.Plugin;
-import com.archivesmc.archblock.runnables.RelayRunnable;
+import cf.zandercraft.zcblockprot.wrappers.Plugin;
+import cf.zandercraft.zcblockprot.runnables.RelayRunnable;
 import org.hibernate.Query;
 import org.hibernate.Session;
 

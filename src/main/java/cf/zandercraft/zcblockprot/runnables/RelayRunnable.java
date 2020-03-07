@@ -1,7 +1,7 @@
-package com.archivesmc.archblock.runnables;
+package cf.zandercraft.zcblockprot.runnables;
 
-import com.archivesmc.archblock.wrappers.Plugin;
-import com.archivesmc.archblock.wrappers.Player;
+import cf.zandercraft.zcblockprot.wrappers.Plugin;
+import cf.zandercraft.zcblockprot.wrappers.Player;
 
 public class RelayRunnable implements Runnable {
     private final Plugin plugin;

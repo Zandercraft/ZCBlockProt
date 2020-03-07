@@ -1,6 +1,6 @@
-package com.archivesmc.archblock.runnables;
+package cf.zandercraft.zcblockprot.runnables;
 
-import com.archivesmc.archblock.wrappers.Plugin;
+import cf.zandercraft.zcblockprot.wrappers.Plugin;
 
 public class ConsoleRelayRunnable extends RelayRunnable implements Runnable {
     private final Plugin plugin;

@@ -1,4 +1,4 @@
-package com.archivesmc.archblock.wrappers;
+package cf.zandercraft.zcblockprot.wrappers;
 
 public interface Logger {
     void info(String message);

@@ -1,7 +1,7 @@
-package com.archivesmc.archblock.runnables.database.commands;
+package cf.zandercraft.zcblockprot.runnables.database.commands;
 
-import com.archivesmc.archblock.wrappers.Block;
-import com.archivesmc.archblock.wrappers.Plugin;
+import cf.zandercraft.zcblockprot.wrappers.Block;
+import cf.zandercraft.zcblockprot.wrappers.Plugin;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -87,7 +87,7 @@ public class MassOwnershipChanger extends Thread {
                             }
                         }
                     } else {
-                        com.archivesmc.archblock.storage.entities.Block newBlock = new com.archivesmc.archblock.storage.entities.Block(
+                        cf.zandercraft.zcblockprot.storage.entities.Block newBlock = new cf.zandercraft.zcblockprot.storage.entities.Block(
                                 (long) x, (long) y, (long) z, this.owner, world
                         );
 

@@ -1,8 +1,8 @@
-package com.archivesmc.archblock.bukkit.commands;
+package cf.zandercraft.zcblockprot.bukkit.commands;
 
-import com.archivesmc.archblock.runnables.RelayRunnable;
-import com.archivesmc.archblock.runnables.database.commands.TransferBlocksThread;
-import com.archivesmc.archblock.wrappers.bukkit.BukkitPlugin;
+import cf.zandercraft.zcblockprot.runnables.RelayRunnable;
+import cf.zandercraft.zcblockprot.runnables.database.commands.TransferBlocksThread;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

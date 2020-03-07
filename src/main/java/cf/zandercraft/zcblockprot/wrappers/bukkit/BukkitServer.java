@@ -1,7 +1,7 @@
-package com.archivesmc.archblock.wrappers.bukkit;
+package cf.zandercraft.zcblockprot.wrappers.bukkit;
 
-import com.archivesmc.archblock.wrappers.Player;
-import com.archivesmc.archblock.wrappers.Server;
+import cf.zandercraft.zcblockprot.wrappers.Player;
+import cf.zandercraft.zcblockprot.wrappers.Server;
 import org.bukkit.OfflinePlayer;
 
 import java.util.UUID;

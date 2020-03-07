@@ -1,6 +1,6 @@
-package com.archivesmc.archblock.bukkit.commands;
+package cf.zandercraft.zcblockprot.bukkit.commands;
 
-import com.archivesmc.archblock.wrappers.bukkit.BukkitPlugin;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -65,7 +65,7 @@ public class FriendsCommand implements CommandExecutor {
                 }
 
                 currentLine.add(
-                        ((com.archivesmc.archblock.storage.entities.Player) p.get("this")).getUsername()
+                        ((cf.zandercraft.zcblockprot.storage.entities.Player) p.get("this")).getUsername()
                 );
             }
 

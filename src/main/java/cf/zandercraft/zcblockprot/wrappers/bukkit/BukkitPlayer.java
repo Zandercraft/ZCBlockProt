@@ -1,6 +1,6 @@
-package com.archivesmc.archblock.wrappers.bukkit;
+package cf.zandercraft.zcblockprot.wrappers.bukkit;
 
-import com.archivesmc.archblock.wrappers.Player;
+import cf.zandercraft.zcblockprot.wrappers.Player;
 
 import java.util.UUID;
 

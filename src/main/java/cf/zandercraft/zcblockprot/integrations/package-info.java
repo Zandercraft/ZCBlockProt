@@ -3,4 +3,4 @@
  * with other plugins.
  */
 
-package com.archivesmc.archblock.integrations;
+package cf.zandercraft.zcblockprot.integrations;

@@ -1,7 +1,7 @@
-package com.archivesmc.archblock.wrappers;
+package cf.zandercraft.zcblockprot.wrappers;
 
-import com.archivesmc.archblock.api.ArchBlock;
-import com.archivesmc.archblock.integrations.WorldGuard;
+import cf.zandercraft.zcblockprot.api.ArchBlock;
+import cf.zandercraft.zcblockprot.integrations.WorldGuard;
 import org.hibernate.Session;
 
 public interface Plugin {

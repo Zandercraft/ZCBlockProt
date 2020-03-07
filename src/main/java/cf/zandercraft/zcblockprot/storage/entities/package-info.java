@@ -3,4 +3,4 @@
  * working with the database.
  */
 
-package com.archivesmc.archblock.storage.entities;
+package cf.zandercraft.zcblockprot.storage.entities;

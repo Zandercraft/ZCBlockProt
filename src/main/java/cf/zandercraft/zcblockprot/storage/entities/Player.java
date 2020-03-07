@@ -1,4 +1,4 @@
-package com.archivesmc.archblock.storage.entities;
+package cf.zandercraft.zcblockprot.storage.entities;
 
 import java.util.UUID;
 

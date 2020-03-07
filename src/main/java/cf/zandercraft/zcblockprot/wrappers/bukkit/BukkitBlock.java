@@ -1,7 +1,7 @@
-package com.archivesmc.archblock.wrappers.bukkit;
+package cf.zandercraft.zcblockprot.wrappers.bukkit;
 
-import com.archivesmc.archblock.wrappers.Block;
-import com.archivesmc.archblock.wrappers.World;
+import cf.zandercraft.zcblockprot.wrappers.Block;
+import cf.zandercraft.zcblockprot.wrappers.World;
 
 public class BukkitBlock implements Block {
     private org.bukkit.block.Block wrappedBlock;

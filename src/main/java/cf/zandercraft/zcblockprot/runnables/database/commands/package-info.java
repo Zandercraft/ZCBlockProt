@@ -3,4 +3,4 @@
  * are used in various commands.
  */
 
-package com.archivesmc.archblock.runnables.database.commands;
+package cf.zandercraft.zcblockprot.runnables.database.commands;

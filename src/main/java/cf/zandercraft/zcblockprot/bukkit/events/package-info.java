@@ -4,4 +4,4 @@
  * both in the same class.
  */
 
-package com.archivesmc.archblock.bukkit.events;
+package cf.zandercraft.zcblockprot.bukkit.events;

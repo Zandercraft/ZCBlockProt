@@ -1,4 +1,4 @@
-package com.archivesmc.archblock.wrappers;
+package cf.zandercraft.zcblockprot.wrappers;
 
 public interface World {
     String getName();

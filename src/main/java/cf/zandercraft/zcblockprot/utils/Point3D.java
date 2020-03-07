@@ -1,4 +1,4 @@
-package com.archivesmc.archblock.utils;
+package cf.zandercraft.zcblockprot.utils;
 
 /**
  * Utility class that represents a coordinate in 3D space.

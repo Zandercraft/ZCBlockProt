@@ -4,4 +4,4 @@
  * Right now, there's only one API class - ArchBlock.
  */
 
-package com.archivesmc.archblock.api;
+package cf.zandercraft.zcblockprot.api;

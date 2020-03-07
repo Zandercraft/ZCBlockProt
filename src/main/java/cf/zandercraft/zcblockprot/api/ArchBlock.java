@@ -1,11 +1,11 @@
-package com.archivesmc.archblock.api;
+package cf.zandercraft.zcblockprot.api;
 
-import com.archivesmc.archblock.runnables.database.*;
-import com.archivesmc.archblock.storage.entities.Friendship;
-import com.archivesmc.archblock.wrappers.Block;
-import com.archivesmc.archblock.wrappers.Player;
-import com.archivesmc.archblock.wrappers.Plugin;
-import com.archivesmc.archblock.wrappers.World;
+import cf.zandercraft.zcblockprot.runnables.database.*;
+import cf.zandercraft.zcblockprot.storage.entities.Friendship;
+import cf.zandercraft.zcblockprot.wrappers.Block;
+import cf.zandercraft.zcblockprot.wrappers.Player;
+import cf.zandercraft.zcblockprot.wrappers.Plugin;
+import cf.zandercraft.zcblockprot.wrappers.World;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -131,7 +131,7 @@ public class ArchBlock {
     public void setOwnerUUID(String world, int x, int y, int z, UUID owner) {
         world = world.toLowerCase();
 
-        com.archivesmc.archblock.storage.entities.Block b = new com.archivesmc.archblock.storage.entities.Block(
+        cf.zandercraft.zcblockprot.storage.entities.Block b = new cf.zandercraft.zcblockprot.storage.entities.Block(
                 (long) x, (long) y, (long) z, owner.toString(), world
         );
 
@@ -291,7 +291,7 @@ public class ArchBlock {
             return r;
         }
 
-        List result = s.createCriteria(com.archivesmc.archblock.storage.entities.Player.class)
+        List result = s.createCriteria(cf.zandercraft.zcblockprot.storage.entities.Player.class)
                 .add(Restrictions.in("uuid", r))
                 .setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP)
                 .list();
@@ -359,7 +359,7 @@ public class ArchBlock {
     public void storePlayer(UUID uuid, String username) {
         username = username.toLowerCase();
 
-        com.archivesmc.archblock.storage.entities.Player p = new com.archivesmc.archblock.storage.entities.Player(
+        cf.zandercraft.zcblockprot.storage.entities.Player p = new cf.zandercraft.zcblockprot.storage.entities.Player(
                 uuid.toString(), username
         );
 
@@ -382,7 +382,7 @@ public class ArchBlock {
      *
      * @param player The ArchBlock Player entity to store
      */
-    public void storePlayer(com.archivesmc.archblock.storage.entities.Player player) {
+    public void storePlayer(cf.zandercraft.zcblockprot.storage.entities.Player player) {
         new StorePlayerThread(this.plugin, player).start();
     }
 }

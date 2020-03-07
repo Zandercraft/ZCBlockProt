@@ -5,4 +5,4 @@
  * This is the base package for that plugin.
  */
 
-package com.archivesmc.archblock;
+package cf.zandercraft.zcblockprot;

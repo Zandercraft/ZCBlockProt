@@ -1,8 +1,8 @@
-package com.archivesmc.archblock.runnables.migration;
+package cf.zandercraft.zcblockprot.runnables.migration;
 
-import com.archivesmc.archblock.wrappers.Plugin;
-import com.archivesmc.archblock.storage.entities.Block;
-import com.archivesmc.archblock.utils.Point3D;
+import cf.zandercraft.zcblockprot.wrappers.Plugin;
+import cf.zandercraft.zcblockprot.storage.entities.Block;
+import cf.zandercraft.zcblockprot.utils.Point3D;
 import org.hibernate.Query;
 import org.hibernate.Session;
 

@@ -1,7 +1,7 @@
-package com.archivesmc.archblock.bukkit.events;
+package cf.zandercraft.zcblockprot.bukkit.events;
 
-import com.archivesmc.archblock.wrappers.bukkit.BukkitPlayer;
-import com.archivesmc.archblock.wrappers.bukkit.BukkitPlugin;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlayer;
+import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
