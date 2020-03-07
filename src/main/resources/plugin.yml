@@ -1,69 +1,84 @@
-name: ArchBlock
-main: com.archivesmc.archblock.wrappers.bukkit.BukkitPlugin
-version: 0.1.1
-author: Gareth Coles
-website: https://github.com/TheArchives/ArchBlock
+name: ZCBlockProt
+main: cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin
+version: 1.0.0
+authors: [Zandercraft, Gareth Coles]
+website: https://github.com/Zandercraft/ZCBlockProt
 
 depend: [WGCustomFlags, WorldEdit, WorldGuard]
-softdepend: [WatchBlock]
 
 commands:
     # User commands
-
-    friend:
-        description: Add another player as a friend, and allow them to edit your blocks
+    vouch:
+        description: Vouch for another player as a friend, and allow them to edit your blocks
         usage: /<command> [player]
         aliases: [wallow]
-    friends:
-        description: List everyone you've added as a friend
+    vouches:
+        description: List everyone you've vouched for
         usage: /<command>
         aliases: [wlist]
     transferblocks:
-        description: Transfer all your blocks to another player
+        description: Transfer ownership of all your blocks to another player
         usage: /<command> [player]
         aliases: []
-        permission: archblock.transfer
-    unfriend:
-        description: Remove another player from your friends list, preventing them from editing your blocks
+        permission: zcblockprot.transfer
+    unvouch:
+        description: Remove another player from your vouches list, preventing them from editing your blocks
         usage: /<command> [player]
         aliases: [wremove, unwallow]
 
     # Staff commands
-
     disownplayer:
         description: Disown all blocks owned by a specific player
         usage: /<command> [player]
         aliases: [disown]
-        permission: archblock.admin
+        permission: zcblockprot.admin.disown.player
     disownworld:
         description: Disown all blocks on a specific world
         usage: /<command> [world]
         aliases: [disownw]
-        permission: archblock.admin
+        permission: zcblockprot.admin.disown.world
     setowner:
         description: Set a player as the owner of a (WorldEdit) selecion of blocks
         usage: /setowner [player]
         aliases: [wtransfer]
-        permission: archblock.admin
-    transferplayer:
+        permission: zcblockprot.admin.setowner
+    transferplayerprot:
         description: Transfer all owned blocks from one player to another
         usage: /<command> [player] [target player]
         aliases: []
-        permission: archblock.admin
+        permission: zcblockprot.admin.transferplayerprot
 
 permissions:
-    archblock.*:
+    zcblockprot.*:
         description: Gives access to all commands and overrides
         children:
-            archblock.admin: true
-            archblock.bypass: true
-            archblock.transfer: true
-    archblock.admin:
+            zcblockprot.admin: true
+            zcblockprot.bypass: true
+            zcblockprot.transfer: true
+    zcblockprot.admin:
         description: Gives a player access to all admin commands
+        children:
+            zcblockprot.admin.disown
+            zcblockprot.admin.disown.player
+            zcblockprot.admin.disown.world
+            zcblockprot.admin.setowner
+            zcblockprot.admin.transferplayerprot
         default: op
-    archblock.bypass:
+    zcblockprot.admin.disown:
+        description: Gives a player access to all disown commands
+        children:
+            zcblockprot.admin.disown.player
+            zcblockprot.admin.disown.world
+        default: op
+    zcblockprot.admin.setowner:
+        description: Gives a player access to the setowner command
+        default: op
+    zcblockprot.admin.transferplayerprot:
+        description: Gives a player access to the transferplayerprot command
+        default: op
+    zcblockprot.bypass:
         description: Allows a player to bypass all block protection
         default: op
-    archblock.transfer:
+    zcblockprot.transfer:
         description: Allow a player to transfer ownership of all of their blocks to another player
         default: op
