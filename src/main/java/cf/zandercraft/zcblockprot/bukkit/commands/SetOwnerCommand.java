@@ -59,12 +59,12 @@ public class SetOwnerCommand implements CommandExecutor {
                     sender.sendMessage(this.plugin.getPrefixedLocalisedString("unknown_player", args[0]));
                 } else {
                     Region selection = null;
+                    BukkitWorld bukkitWorld = new BukkitWorld(((Player)sender).getWorld());
                     try {
-                        selection = this.plugin.getWorldEdit().getSession((Player) sender).getSelection(new BukkitWorld(((Player)sender).getWorld()));
+                        selection = this.plugin.getWorldEdit().getSession((Player) sender).getSelection(bukkitWorld);
                     } catch (IncompleteRegionException e) {
                         e.printStackTrace();
                     }
-                    ;
 
                     if (selection instanceof CuboidRegion) {
                         CuboidRegion cs = (CuboidRegion) selection;

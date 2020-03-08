@@ -4,7 +4,8 @@ build/
 # Downloaded libraries
 lib/
 
-# Project/Gradle files
+# Project/Gradle/Maven files
 .gradle
 .idea
 *.iml
+target
