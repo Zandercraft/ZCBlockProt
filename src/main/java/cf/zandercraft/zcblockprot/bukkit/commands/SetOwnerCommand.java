@@ -5,10 +5,14 @@ import cf.zandercraft.zcblockprot.runnables.RelayRunnable;
 import cf.zandercraft.zcblockprot.runnables.database.commands.MassOwnershipChanger;
 import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitBlock;
 import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin;
-import com.sk89q.worldedit.bukkit.selections.CuboidSelection;
-import com.sk89q.worldedit.bukkit.selections.Selection;
+import com.sk89q.worldedit.IncompleteRegionException;
+import com.sk89q.worldedit.Vector;
+import com.sk89q.worldedit.bukkit.BukkitWorld;
+import com.sk89q.worldedit.regions.CuboidRegion;
+import com.sk89q.worldedit.regions.Region;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -26,6 +30,13 @@ public class SetOwnerCommand implements CommandExecutor {
 
     public SetOwnerCommand(BukkitPlugin plugin) {
         this.plugin = plugin;
+    }
+
+    public static org.bukkit.Location getLocation(World world, Vector vec) {
+        if (vec == null) {
+            return null;
+        }
+        return new Location(world, vec.getX(), vec.getY(), vec.getZ());
     }
 
     @Override
@@ -47,15 +58,21 @@ public class SetOwnerCommand implements CommandExecutor {
                 if (target == null && !("!".equals(args[0]))) {
                     sender.sendMessage(this.plugin.getPrefixedLocalisedString("unknown_player", args[0]));
                 } else {
-                    Selection selection = this.plugin.getWorldEdit().getSelection((Player) sender);
+                    Region selection = null;
+                    try {
+                        selection = this.plugin.getWorldEdit().getSession((Player) sender).getSelection(new BukkitWorld(((Player)sender).getWorld()));
+                    } catch (IncompleteRegionException e) {
+                        e.printStackTrace();
+                    }
+                    ;
 
-                    if (selection instanceof CuboidSelection) {
-                        CuboidSelection cs = (CuboidSelection) selection;
+                    if (selection instanceof CuboidRegion) {
+                        CuboidRegion cs = (CuboidRegion) selection;
 
                         ArrayList<Block> blocks = new ArrayList<>();
 
-                        Location min = cs.getMinimumPoint();
-                        Location max = cs.getMaximumPoint();
+                        Location min = getLocation(((Player)sender).getWorld(), cs.getMinimumPoint());
+                        Location max = getLocation(((Player)sender).getWorld(), cs.getMaximumPoint());
 
                         int minX = min.getBlockX();
                         int minY = min.getBlockY();
