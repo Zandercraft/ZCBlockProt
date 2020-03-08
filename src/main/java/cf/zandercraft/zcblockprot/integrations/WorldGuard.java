@@ -28,7 +28,7 @@ public class WorldGuard {
      */
     public boolean isInIgnoredRegion(Block block) {
         if (this.plugin instanceof BukkitPlugin) {
-            Vector3 point = BukkitAdapter.adapt(((org.bukkit.block.Block) block.getWrapped()).getLocation());
+            Vector3 point = BukkitAdapter.asVector(((org.bukkit.block.Block) block.getWrapped()).getLocation());
             RegionManager regionManager = ((BukkitPlugin) this.plugin).getWorldGuard().getRegionManager((World) block.getWorld().getWrapped());
             ApplicableRegionSet set = regionManager.getApplicableRegions(point);
 
