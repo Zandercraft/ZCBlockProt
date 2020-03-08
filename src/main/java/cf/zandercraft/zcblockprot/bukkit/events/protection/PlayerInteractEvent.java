@@ -38,7 +38,7 @@ public class PlayerInteractEvent implements Listener {
             return;
         }
 
-        if (event.getPlayer().getItemInHand().getType().equals(Material.WOOD_SWORD)) {
+        if (event.getPlayer().getItemInHand().getType().equals(Material.WOODEN_SWORD)) {
 
             if (action.equals(Action.LEFT_CLICK_BLOCK) || action.equals(Action.RIGHT_CLICK_BLOCK)) {
                 UUID owner = this.plugin.getApi().getOwnerUUID(new BukkitBlock(block));

@@ -6,8 +6,8 @@ import cf.zandercraft.zcblockprot.runnables.database.commands.MassOwnershipChang
 import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitBlock;
 import cf.zandercraft.zcblockprot.wrappers.bukkit.BukkitPlugin;
 import com.sk89q.worldedit.IncompleteRegionException;
-import com.sk89q.worldedit.Vector;
 import com.sk89q.worldedit.bukkit.BukkitWorld;
+import com.sk89q.worldedit.math.Vector3;
 import com.sk89q.worldedit.regions.CuboidRegion;
 import com.sk89q.worldedit.regions.Region;
 import org.bukkit.Location;
@@ -32,7 +32,7 @@ public class SetOwnerCommand implements CommandExecutor {
         this.plugin = plugin;
     }
 
-    public static org.bukkit.Location getLocation(World world, Vector vec) {
+    public static org.bukkit.Location getLocation(World world, Vector3 vec) {
         if (vec == null) {
             return null;
         }
@@ -71,8 +71,8 @@ public class SetOwnerCommand implements CommandExecutor {
 
                         ArrayList<Block> blocks = new ArrayList<>();
 
-                        Location min = getLocation(((Player)sender).getWorld(), cs.getMinimumPoint());
-                        Location max = getLocation(((Player)sender).getWorld(), cs.getMaximumPoint());
+                        Location min = getLocation(((Player)sender).getWorld(), cs.getMinimumPoint().toVector3());
+                        Location max = getLocation(((Player)sender).getWorld(), cs.getMaximumPoint().toVector3());
 
                         int minX = min.getBlockX();
                         int minY = min.getBlockY();
