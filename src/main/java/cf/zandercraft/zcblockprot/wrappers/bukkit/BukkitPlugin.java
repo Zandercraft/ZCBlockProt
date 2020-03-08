@@ -208,7 +208,7 @@ public class BukkitPlugin extends JavaPlugin implements Plugin {
      *
      * @return WGCustomFlags plugin, or null if it's not loaded
      */
-    public WGCustomFlagsPlugin getWGCustomFlagsPlugin() {
+     public WGCustomFlagsPlugin getWGCustomFlagsPlugin() {
         return (WGCustomFlagsPlugin) this.getServer().getPluginManager().getPlugin("WGCustomFlags");
     }
 
@@ -218,19 +218,10 @@ public class BukkitPlugin extends JavaPlugin implements Plugin {
      * @return The WorldGuard integration class object
      */
 
-    @Override
-    public WorldGuard getWorldGuardIntegration() {
-        return this.worldGuardIntegration;
-    }
-
-    /**
-     * Check whether the WatchBlock plugin is loaded
-     *
-     * @return true if WatchBlock is loaded, false otherwise
-     */
-    public boolean hasWatchBlockPlugin() {
-        return this.getServer().getPluginManager().isPluginEnabled("WatchBlock");
-    }
+     @Override
+     public WorldGuard getWorldGuardIntegration() {
+       return this.worldGuardIntegration;
+     }
 
     public synchronized boolean isTaskRunning() {
         return this.taskRunning;
