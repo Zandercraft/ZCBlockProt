@@ -10,5 +10,5 @@ Much of the plugin information has been [moved to the wiki](https://github.com/T
 Developing
 ----------
 
-Looking to integrate your plugin with ArchBlock? Take a look at [the developer documentation](https://github.com/TheArchives/ArchBlock/wiki/Development) for more information.
+Looking to integrate your plugin with ZCBlockProt? ZCBlockProt maintains API-compatibility with ArchBlock. Take a look at [the developer documentation of ArchBlock](https://github.com/TheArchives/ArchBlock/wiki/Development) for more information.
 
